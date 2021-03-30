@@ -51,8 +51,8 @@ class SessionDetails extends PureComponent {
       id,
       display,
       endDate,
-      mentorNotes,
-      mentor,
+      // mentorNotes,
+      // mentor,
     } = this.props.sessionSlot;
     return (
       <div className="cream-bg">
