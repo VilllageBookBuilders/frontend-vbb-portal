@@ -44,7 +44,7 @@ export const Step2 = (props) => {
   return (
     <div>
       <Row>
-        <Col span={12}>
+        <Col xs={24} sm={24} md={24} lg={16} xl={12}>
           <Form
             form={form}
             name="register"
@@ -483,7 +483,7 @@ export const Step2 = (props) => {
             </Form.Item>
           </Form>
         </Col>
-        <Col span={12}>
+        <Col xs={0} sm={0} md={0} lg={8} xl={12}>
           <div style={{ padding: '0 10px' }}>
             <Image src={ActionPicture}></Image>
           </div>

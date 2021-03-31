@@ -6,16 +6,6 @@ import * as actions from '../redux/actions';
 import Logo from '../images/vbb-small-logo-white.png';
 
 /**
- * local inline style
- */
-// const paragraphStyle = {
-//   paddingLeft: '0px',
-//   fontSize: '20px',
-//   color: '#ff914d',
-//   fontWeight: 'bolder',
-// };
-
-/**
  * HomeSignin.
  * Connected functional component
  * Displays Google Signin button and Register button
@@ -58,7 +48,7 @@ const HomeSignin = ({ history, logIn, manageFailedGoogleLogin }) => {
         <p style={{ margin: '1rem 0' }}>
           Don't have an account with us yet?
           <Button
-            style={{ fontWeight: 'bold', lineHeight: '.5' }}
+            style={{ fontWeight: 'bold', lineHeight: '.5', color: 'white' }}
             type="link"
             href="/signup/"
           >
