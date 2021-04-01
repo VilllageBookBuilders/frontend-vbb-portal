@@ -1,0 +1,30 @@
+version: 2.1
+
+jobs:
+  Deploy:
+    docker:
+      - image: circleci/python:3.8-node
+    steps:
+      - checkout
+      - run:
+          command: |
+            yarn install
+      - run:
+          name: Creating new Build
+          command: |
+            yarn build
+      - run:
+          command: |
+            pip install awscli
+      - run:
+          name: Copy Static Files
+          command: aws s3 sync build/ s3://${AWS_STORAGE_BUCKET_NAME}/${CIRCLE_BRANCH}/ --acl public-read --size-only
+
+workflows:
+  build-and-deploy-branch:
+    jobs:
+      - Deploy-Staging
+          # context: sa-addin-staging
+          # filters:
+          #   branches:
+          #     only: master 
