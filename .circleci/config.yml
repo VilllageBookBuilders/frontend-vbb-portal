@@ -6,10 +6,6 @@ jobs:
       - image: circleci/python:3.8-node
     steps:
       - checkout
-      - run:
-          name: Set CI to false
-          command: |
-            export CI=false
       - restore_cache:
           key: v1-{{ .Branch }}-{{ checksum "package.json" }}
       - run:
@@ -22,7 +18,7 @@ jobs:
       - run:
           name: Creating new Build
           command: |
-            yarn build
+            CI=false yarn build
       - run:
           command: |
             pip install awscli
