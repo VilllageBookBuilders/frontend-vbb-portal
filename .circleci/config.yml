@@ -28,7 +28,7 @@ jobs:
           command: aws s3 rm --recursive --endpoint=${DO_ENDPOINT} s3://${DO_SPACE}/${CIRCLE_BRANCH}/ 
       - run:
           name: Copy Static Files
-          command: aws s3 cp --recursive --endpoint=${DO_ENDPOINT} build/ s3://${DO_SPACE}/${CIRCLE_BRANCH}/ --acl public-read --size-only
+          command: aws s3 cp --recursive --endpoint=${DO_ENDPOINT} build/ s3://${DO_SPACE}/${CIRCLE_BRANCH}/ --acl public-read 
 
 workflows:
   build-and-deploy-branch:
