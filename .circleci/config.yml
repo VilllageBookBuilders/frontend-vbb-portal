@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Creating new Build
           command: |
-            CI=false yarn build
+            yarn run build-demo
       - run:
           command: |
             pip install awscli

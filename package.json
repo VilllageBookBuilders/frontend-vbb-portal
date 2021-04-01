@@ -13,6 +13,7 @@
     "craco-less": "^1.17.1",
     "dot-prop": "^5.2.0",
     "dotenv": "^8.2.0",
+    "dotenv-cli": "^4.0.0",
     "install": "^0.13.0",
     "moment": "^2.27.0",
     "moment-timezone": "^0.5.33",
@@ -30,7 +31,8 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "sh -ac '. ${REACT_APP_ENV}.env; craco build'",
+    "build": "craco build",
+    "build-demo": "dotenv -e demo.env craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "local": "react-scripts start"
@@ -51,10 +53,10 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-prettier": "^7.1.0",
-    "prettier": "^2.2.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1"
+    "@testing-library/user-event": "^7.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "prettier": "^2.2.1"
   }
 }
