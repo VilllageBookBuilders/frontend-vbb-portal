@@ -4,10 +4,12 @@ jobs:
   Deploy:
     docker:
       - image: circleci/python:3.8-node
-        environment:
-          CI: "false"
     steps:
       - checkout
+      - run:
+          name: Set CI to false
+          command: |
+            export CI=false
       - restore_cache:
           key: v1-{{ .Branch }}-{{ checksum "package.json" }}
       - run:
