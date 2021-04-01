@@ -23,7 +23,7 @@ jobs:
 workflows:
   build-and-deploy-branch:
     jobs:
-      - Deploy-Staging
+      - Deploy
           # context: sa-addin-staging
           # filters:
           #   branches:
