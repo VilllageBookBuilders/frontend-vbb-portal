@@ -30,7 +30,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "sh -ac '. .env.${REACT_APP_ENV}; craco build'",
     "test": "craco test",
     "eject": "react-scripts eject",
     "local": "react-scripts start"
