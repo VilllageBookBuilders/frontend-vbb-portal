@@ -15,6 +15,7 @@ jobs:
           key: v1-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
             - node_modules
+            - yar
       - run:
           name: Creating new Build
           command: |
@@ -23,8 +24,11 @@ jobs:
           command: |
             pip install awscli
       - run:
+          name: Remove Existing Build
+          command: aws s3 rm --recursive --endpoint=${DO_ENDPOINT} s3://${DO_SPACE}/${CIRCLE_BRANCH}/ 
+      - run:
           name: Copy Static Files
-          command: aws s3 sync build/ s3://${AWS_STORAGE_BUCKET_NAME}/${CIRCLE_BRANCH}/ --acl public-read --size-only
+          command: aws s3 cp --recursive --endpoint=${DO_ENDPOINT} build/ s3://${DO_SPACE}/${CIRCLE_BRANCH}/ --acl public-read --size-only
 
 workflows:
   build-and-deploy-branch:
