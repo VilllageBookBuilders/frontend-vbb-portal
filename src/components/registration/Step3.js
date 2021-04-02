@@ -14,7 +14,7 @@ export const Step3 = (props) => {
   return (
     <div style={{ paddingBottom: '25px' }}>
       <Row>
-        <Col span={12}>
+        <Col xs={24} sm={24} md={24} lg={16} xl={12}>
           <List style={{ padding: '25px 0' }}>
             <h3 style={{padding: '0 0 25px 25px'}}>Just $5 / month will afford your mentee:</h3>
             <List.Item>
@@ -52,7 +52,7 @@ export const Step3 = (props) => {
             Donate
           </Button>
         </Col>
-        <Col span={12}>
+        <Col xs={0} sm={0} md={0} lg={8} xl={12}>
           <div style={{ padding: '0 10px' }}>
             <Image src={ActionPicture}></Image>
           </div>

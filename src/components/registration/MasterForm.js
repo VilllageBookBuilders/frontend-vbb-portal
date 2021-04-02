@@ -22,78 +22,56 @@ const MasterForm = () => {
   };
 
   const backButton = () => {
-    if (currentStep == 2 || currentStep == 3) {
+    if (currentStep === 2 || currentStep === 3) {
       return (
-        <Button
-          style={{ marginRight: '10px'}}
-          type="button"
-          onClick={back}
-        >
+        <Button style={{ marginRight: '10px' }} type="button" onClick={back}>
           <LeftOutlined />
           Back
         </Button>
       );
     }
     return null;
-  }
+  };
 
   const nextButton = () => {
-    if (currentStep == 1 || currentStep == 2) {
+    if (currentStep === 1 || currentStep === 2) {
       return (
-        <Button
-          style={{ marginRight: '10px'}}
-          type="button"
-          onClick={next}
-        >
+        <Button style={{ marginRight: '10px' }} type="button" onClick={next}>
           Next
           <RightOutlined />
         </Button>
       );
     }
     return null;
-  }
+  };
 
   const registerButton = () => {
     if (currentStep === 3) {
       return (
-        <Button
-          style={{ marginRight: '10px'}}
-          type="button"
-          onClick={next}
-        >
+        <Button style={{ marginRight: '10px' }} type="button" onClick={next}>
           Register
           <CheckOutlined />
         </Button>
       );
     }
     return null;
-  }
+  };
 
   return (
     <div>
       {currentStep < 4 ? (
         <div style={{ margin: '0 0 25px 0' }}>
-          <ProgressBar
-            currentStep={currentStep}
-          />
-      </div>
+          <ProgressBar currentStep={currentStep} />
+        </div>
       ) : (
         <div></div>
       )}
 
       <Form>
-        <Step1
-          currentStep={currentStep}
-        />
-        <Step2
-          currentStep={currentStep}
-        />
-        <Step3
-          currentStep={currentStep}
-        />
-        <Step4
-          currentStep={currentStep}
-        />
+        <Step1 currentStep={currentStep} />
+        <Step2 currentStep={currentStep} />
+        <Step3 currentStep={currentStep} />
+        <Step4 currentStep={currentStep} />
         {backButton()}
         {nextButton()}
         {registerButton()}
