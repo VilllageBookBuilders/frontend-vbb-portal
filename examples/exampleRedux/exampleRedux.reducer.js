@@ -2,7 +2,7 @@
 const initialState = {};
 
 //exported and imported into `src/redux/rootReducer.js`
-const exampleStore = (state = initialState, action) => {
+export const exampleReducer = (state = initialState, action) => {
   switch (action.type) {
     //this would be imported from the exampleRedux.actions.js
     case 'ACTION_TYPE':
