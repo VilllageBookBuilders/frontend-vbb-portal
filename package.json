@@ -31,6 +31,7 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
+    "@babel/helper-define-map": "^7.13.12",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^13.0.16",
