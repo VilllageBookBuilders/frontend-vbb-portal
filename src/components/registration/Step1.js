@@ -1,20 +1,11 @@
 import React from 'react';
 // import { connect } from 'react-redux';
 // import * as actions from '../../redux/actions';
-import {
-  Form,
-  Input,
-  Tooltip,
-  Checkbox,
-  Select,
-  Row,
-  Col,
-  Image,
-} from 'antd';
+import { Form, Input, Tooltip, Checkbox, Row, Col, Image } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import MenteePicture from '../../images/vbb-mentee-computer.png';
 
-const { Option } = Select;
+// const { Option } = Select;
 
 export const Step1 = (props) => {
   const [form] = Form.useForm();
@@ -86,15 +77,15 @@ export const Step1 = (props) => {
               <Input />
             </Form.Item>
             <Form.Item
-               name="phone"
-               label={
-                 <span>
-                   Phone&nbsp;
-                   <Tooltip title="USA & Canada country code is +1">
-                     <QuestionCircleOutlined />
-                   </Tooltip>
-                 </span>
-               }
+              name="phone"
+              label={
+                <span>
+                  Phone&nbsp;
+                  <Tooltip title="USA & Canada country code is +1">
+                    <QuestionCircleOutlined />
+                  </Tooltip>
+                </span>
+              }
               rules={[
                 {
                   required: true,
@@ -106,7 +97,7 @@ export const Step1 = (props) => {
                 style={{
                   width: '100%',
                 }}
-                placeholder='+1 (123) 123-4567'
+                placeholder="+1 (123) 123-4567"
               />
             </Form.Item>
             <Form.Item
@@ -135,24 +126,22 @@ export const Step1 = (props) => {
                 },
               ]}
             >
-              <Checkbox>
-                I would like to receive the VBB newsletter.
-              </Checkbox>
+              <Checkbox>I would like to receive the VBB newsletter.</Checkbox>
             </Form.Item>
           </Form>
         </Col>
         <Col xs={0} sm={0} md={0} lg={8} xl={12}>
           <div style={{ padding: '0 10px' }}>
-              <Image src={MenteePicture}></Image>
+            <Image src={MenteePicture}></Image>
           </div>
         </Col>
       </Row>
     </div>
   );
-}
+};
 
 // const mapStateToProps = (state) => ({
-  
+
 // })
 
 // export default connect(mapStateToProps)(Step1)

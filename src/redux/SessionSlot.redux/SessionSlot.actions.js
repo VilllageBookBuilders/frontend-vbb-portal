@@ -10,13 +10,13 @@ import {
   clearIsError,
 } from '../actions';
 
-const fakeSessionResponseData = {
-  id: 'FakeId',
-  display: 'Fake Display',
-  end_date: 'Fake Date',
-  mentor_notes: 'These are some fake notes',
-  mentor: 'not sure what data type the mentor should be',
-};
+// const fakeSessionResponseData = {
+//   id: 'FakeId',
+//   display: 'Fake Display',
+//   end_date: 'Fake Date',
+//   mentor_notes: 'These are some fake notes',
+//   mentor: 'not sure what data type the mentor should be',
+// };
 
 //Action Types
 export const SET_SESSION_INFO = 'SET_SESSION_INFO';

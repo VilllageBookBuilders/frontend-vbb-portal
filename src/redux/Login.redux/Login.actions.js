@@ -18,10 +18,10 @@ import {
 
 // @TODO delete after backend endpoint is live
 // to use replace the call with the const resposne = fakeResponseForTesting
-const fakeResponseForTesting = {
-  status: 200,
-  jwt_refresh_token: 'FAKE_JWT_REFRESH_TOKEN',
-};
+// const fakeResponseForTesting = {
+//   status: 200,
+//   jwt_refresh_token: 'FAKE_JWT_REFRESH_TOKEN',
+// };
 
 /**
  * Manages failed google Login

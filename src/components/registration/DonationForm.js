@@ -1,13 +1,11 @@
 import React from 'react';
 import {
   Elements,
-  loadStripe,
   CardElement,
   injectStripe,
   StripeProvider,
 } from '@stripe/react-stripe-js';
 import { Alert, Spinner } from 'react-bootstrap';
-import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 
 class CheckoutForm extends React.Component {
@@ -49,7 +47,12 @@ class CheckoutForm extends React.Component {
   };
 
   render() {
-    const { data, error, loading, success } = this.state;
+    const {
+      // data,
+      error,
+      loading,
+      success,
+    } = this.state;
 
     return (
       <div>
