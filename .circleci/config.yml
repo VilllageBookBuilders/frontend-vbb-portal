@@ -21,6 +21,14 @@ jobs:
           command: |
             CI=false yarn run build-demo
       - run:
+          name: Run Linting
+          command: |
+            yarn lint
+      - run:
+          name: Run Tests
+          command: |
+            yarn test
+      - run:
           command: |
             pip install awscli
       - run:
