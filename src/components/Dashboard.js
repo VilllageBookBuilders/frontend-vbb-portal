@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../redux/actions';
-import { Card, Col, Row, Button, Alert, Layout } from 'antd';
+import { Card, Col, Row, Button, Alert } from 'antd';
 
 import articulate from '../images/articulate-icon.png';
 import meet from '../images/meet-icon.webp';
@@ -14,7 +14,7 @@ import khan from '../images/khan-icon.jpg';
 const Dashboard = ({ getSessionInfo, user }) => {
 
   const { Meta } = Card;
-  const { Content } = Layout;
+  // const { Content } = Layout;
 
   const onAlertClose = (e) => {
     console.log(e, 'Alert was closed.');
@@ -59,11 +59,13 @@ const Dashboard = ({ getSessionInfo, user }) => {
                 type="primary"
                 href="/booking/"
                 target="_blank"
+                rel="noreferrer" 
               >Book a Mentoring Session</Button>
               <Button
                 style={{ margin: '0 0 2rem 0' }}
                 href="https://calendar.google.com/calendar/r"
                 target="_blank"
+                rel="noreferrer"
               >
                 View Your Calendar
               </Button>
@@ -85,7 +87,7 @@ const Dashboard = ({ getSessionInfo, user }) => {
       <div>
           <Row>
             <Col sm={12} md={12} lg={6} xl={6}>
-              <a href='https://360.articulate.com/review/content/73bf3afe-47f9-4f9f-aa4d-70bf27fbe8d5/review' target='_blank'>
+              <a href='https://360.articulate.com/review/content/73bf3afe-47f9-4f9f-aa4d-70bf27fbe8d5/review' target='_blank' rel="noreferrer">
                 <Card
                   style={{ width: 200 }}
                   cover={
@@ -103,7 +105,7 @@ const Dashboard = ({ getSessionInfo, user }) => {
               </a>
             </Col>
             <Col sm={12} md={12} lg={6} xl={6}>
-              <a href='https://docs.google.com/document/d/e/2PACX-1vR5-WnzhSJ88pfh2yctr7JuRXglAD55q8eluMPnLA1fTIyeKxxrGvL4r7D7wZh8mvd6WTL9GJJ1tkdD/pub' target='_blank'>
+              <a href='https://docs.google.com/document/d/e/2PACX-1vR5-WnzhSJ88pfh2yctr7JuRXglAD55q8eluMPnLA1fTIyeKxxrGvL4r7D7wZh8mvd6WTL9GJJ1tkdD/pub' target='_blank' rel="noreferrer">
                 <Card
                     style={{ width: 200 }}
                     cover={
@@ -121,7 +123,7 @@ const Dashboard = ({ getSessionInfo, user }) => {
                 </a>
               </Col>
               <Col sm={12} md={12} lg={6} xl={6}>
-                <a href='https://idroo.com/' target='_blank'>
+                <a href='https://idroo.com/' target='_blank' rel="noreferrer">
                   <Card
                     style={{ width: 200 }}
                     cover={
@@ -139,7 +141,7 @@ const Dashboard = ({ getSessionInfo, user }) => {
                 </a>
               </Col>
               <Col sm={12} md={12} lg={6} xl={6}>
-                <a href='https://www.khanacademy.org/' target='_blank'>
+                <a href='https://www.khanacademy.org/' target='_blank' rel="noreferrer">
                   <Card
                     style={{ width: 200 }}
                     cover={
@@ -157,7 +159,7 @@ const Dashboard = ({ getSessionInfo, user }) => {
                 </a>
               </Col>
               <Col sm={12} md={12} lg={6} xl={6}>
-                <a href='https://classroom.google.com/u/0/h' target='_blank'>
+                <a href='https://classroom.google.com/u/0/h' target='_blank' rel="noreferrer">
                   <Card
                     style={{ width: 200 }}
                     cover={
@@ -175,7 +177,7 @@ const Dashboard = ({ getSessionInfo, user }) => {
                 </a>
               </Col>
               <Col sm={12} md={12} lg={6} xl={6}>
-                <a href='https://apps.google.com/meet/' target='_blank'>
+                <a href='https://apps.google.com/meet/' target='_blank' rel="noreferrer">
                   <Card
                     style={{ width: 200 }}
                     cover={
@@ -193,7 +195,7 @@ const Dashboard = ({ getSessionInfo, user }) => {
                 </a>
               </Col>
               <Col sm={12} md={12} lg={6} xl={6}>
-                <a href='https://www.facebook.com/groups/villagementors' target='_blank'>
+                <a href='https://www.facebook.com/groups/villagementors' target='_blank' rel="noreferrer">
                   <Card
                     style={{ width: 200 }}
                     cover={

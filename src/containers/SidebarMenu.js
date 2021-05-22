@@ -40,7 +40,7 @@ import {
             <NavLink to="/booking/">Schedule</NavLink>
           </Menu.Item>
           <Menu.Item key="6" icon={<CalendarOutlined />}>
-            <a href="https://calendar.google.com/calendar/r" target='_blank'>Calendar</a>
+            <a href="https://calendar.google.com/calendar/r" target='_blank' rel="noreferrer" >Calendar</a>
           </Menu.Item>
           <Menu.Item key="8" icon={<LogoutOutlined />}>
             <Link onClick={ logOut }>Logout</Link>

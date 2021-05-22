@@ -7,7 +7,6 @@ import {
   EyeTwoTone,
 } from '@ant-design/icons';
 import { connect } from 'react-redux';
-import { GoogleLogin } from 'react-google-login';
 import * as actions from '../redux/actions';
 import { Link, withRouter } from 'react-router-dom';
 
