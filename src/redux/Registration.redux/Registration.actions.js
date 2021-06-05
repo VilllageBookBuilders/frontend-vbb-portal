@@ -30,6 +30,7 @@ export const setRegistrationForm = (regForm) => {
 export const subUserRegistration = (history) => async (dispatch, getState) => {
   dispatch(setProcessingRegistration(true));
   const regForm = getState().registrationForm;
+  console.log(regForm);
   const headers = {
     'Content-Type': 'application/json',
   };

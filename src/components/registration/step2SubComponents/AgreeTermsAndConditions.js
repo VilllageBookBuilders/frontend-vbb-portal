@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../../redux/actions';
-import { Form, Checkbox, Button, Modal } from 'antd';
+import { Form, Checkbox, Button, Modal, Row } from 'antd';
 
 const AgreeTermsAndConditions = ({ registrationForm, setRegistrationForm }) => {
   const [visible, setVisible] = useState(false);
+
   return (
-    <Form.Item>
+    <Row>
       <Button type="primary" onClick={() => setVisible(true)}>
         Terms and Conditions
       </Button>
@@ -239,23 +240,39 @@ const AgreeTermsAndConditions = ({ registrationForm, setRegistrationForm }) => {
           </li>
         </ol>
       </Modal>
-      <Checkbox
-        style={{ marginLeft: '25px' }}
-        checked={registrationForm.additionalInformation.agreeTermsAndConditions}
-        onChange={(e) => {
-          const updatedRegForm = {
-            ...registrationForm,
-            additionalInformation: {
-              ...registrationForm.additionalInformation,
-              agreeTermsAndConditions: e.target.checked,
-            },
-          };
-          setRegistrationForm(updatedRegForm);
-        }}
+      <Form.Item
+        name="terms-and-conditions"
+        valuePropName="checked"
+        rules={[
+          {
+            required: true,
+            transform: (value) => value || undefined,
+            type: 'boolean',
+            message: 'Please agree the terms and conditions.',
+          },
+        ]}
       >
-        I agree to the terms and conditions.
-      </Checkbox>
-    </Form.Item>
+        <Checkbox
+          initialValue="false"
+          style={{ marginLeft: '25px' }}
+          checked={
+            registrationForm.additionalInformation.agreeTermsAndConditions
+          }
+          onChange={(e) => {
+            const updatedRegForm = {
+              ...registrationForm,
+              additionalInformation: {
+                ...registrationForm.additionalInformation,
+                agreeTermsAndConditions: e.target.checked,
+              },
+            };
+            setRegistrationForm(updatedRegForm);
+          }}
+        >
+          I agree to the terms and conditions.
+        </Checkbox>
+      </Form.Item>
+    </Row>
   );
 };
 

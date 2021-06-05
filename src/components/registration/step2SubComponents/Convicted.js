@@ -5,7 +5,10 @@ import { Form, Checkbox } from 'antd';
 
 const Convicted = ({ registrationForm, setRegistrationForm }) => {
   return (
-    <Form.Item label="Have you ever been arrested, charged, or convicted of child abuse or molestation of any form">
+    <Form.Item
+      name="convicted"
+      label="Have you ever been arrested, charged, or convicted of child abuse or molestation of any form"
+    >
       {/* Add if yes alert */}
       <Checkbox
         checked={registrationForm.additionalInformation.convicted}

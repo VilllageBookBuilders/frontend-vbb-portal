@@ -5,7 +5,10 @@ import { Form, Checkbox } from 'antd';
 
 const MoreThanFourMonths = ({ registrationForm, setRegistrationForm }) => {
   return (
-    <Form.Item label="Can you commit to being a mentor for a minimum of 4 months">
+    <Form.Item
+      name="more-than-four-months"
+      label="Can you commit to being a mentor for a minimum of 4 months"
+    >
       {/* Add if no alert */}
       <Checkbox
         checked={registrationForm.additionalInformation.moreThanFourMonths}

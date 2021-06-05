@@ -14,13 +14,6 @@ const GetMoreInvolved = ({ registrationForm, setRegistrationForm }) => {
           involved?
         </span>
       }
-      rules={[
-        {
-          required: true,
-          message: 'This field is required.',
-          whitespace: true,
-        },
-      ]}
     >
       <Checkbox
         checked={registrationForm.additionalInformation.getMoreInvolved}

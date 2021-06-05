@@ -7,7 +7,16 @@ import moment from 'moment-timezone';
 const TimeZone = ({ registrationForm, setRegistrationForm }) => {
   const { Option } = Select;
   return (
-    <Form.Item label="What timezone are you in">
+    <Form.Item
+      name="timezone"
+      label="What timezone are you in"
+      rules={[
+        {
+          required: true,
+          message: 'Timezone is required.',
+        },
+      ]}
+    >
       <Select
         value={registrationForm.timeZone}
         onChange={(e) => {

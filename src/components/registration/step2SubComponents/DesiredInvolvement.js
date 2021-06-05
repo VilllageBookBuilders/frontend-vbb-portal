@@ -5,16 +5,7 @@ import { Form, Checkbox, Row, Col } from 'antd';
 
 const DesiredInvolvement = ({ registrationForm, setRegistrationForm }) => {
   return (
-    <Form.Item
-      label="How would you like to get more involved"
-      rules={[
-        {
-          required: true,
-          message: 'Please select at least one box.',
-          whitespace: true,
-        },
-      ]}
-    >
+    <Form.Item label="How would you like to get more involved?">
       <Row>
         <Col span={16}>
           <Checkbox

@@ -7,6 +7,7 @@ import { QuestionCircleOutlined } from '@ant-design/icons';
 const Address = ({ registrationForm, setRegistrationForm }) => {
   return (
     <Form.Item
+      name="address"
       label={
         <span>
           What city and state/province do you live in&nbsp;
@@ -18,6 +19,7 @@ const Address = ({ registrationForm, setRegistrationForm }) => {
       rules={[
         {
           required: true,
+          message: 'Address is required.',
         },
       ]}
     >

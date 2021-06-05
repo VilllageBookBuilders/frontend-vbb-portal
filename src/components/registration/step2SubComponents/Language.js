@@ -1,26 +1,41 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../../redux/actions';
-import { Form, Checkbox } from 'antd';
+import { Form, Checkbox, Row } from 'antd';
 
 //@todo: not sure if we want to do something fancier iteration
 //biggest concern is how we track that without typescript so that the
 //store doesn't get out of sync with the store
+
 const Language = ({ registrationForm, setRegistrationForm }) => {
   return (
     <Form.Item
       name="language"
       label="Which languages can you speak comfortably"
+      valuePropName="checked"
       rules={[
-        {
-          required: true,
-          message: 'Language is required.',
-          whitespace: true,
-        },
+        () => ({
+          validator(_) {
+            if (
+              registrationForm.additionalInformation.language.english ||
+              registrationForm.additionalInformation.language.spanish ||
+              registrationForm.additionalInformation.language.french ||
+              registrationForm.additionalInformation.language.german
+            ) {
+              console.log('registration form filled');
+              return Promise.resolve();
+            } else {
+              console.log('registration form not filled');
+              return Promise.reject(
+                new Error('Please select at least one language.')
+              );
+            }
+          },
+        }),
       ]}
     >
-      {/* Need to update with languages in backend */}
       <Checkbox
+        name="english"
         checked={registrationForm.additionalInformation.language.english}
         onChange={(e) => {
           const updatedRegForm = {
@@ -92,6 +107,7 @@ const Language = ({ registrationForm, setRegistrationForm }) => {
       >
         German
       </Checkbox>
+      {/* Need to update with languages in backend */}
     </Form.Item>
   );
 };
