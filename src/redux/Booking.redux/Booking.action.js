@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { PYTHON_API } from '../actions/index';
+// import axios from 'axios';
+// import { PYTHON_API } from '../actions/index';
 
 export const MENTOR_CHANGE = 'MENTOR_CHANGE';
 export const COMMIT_CHANGE = 'COMMIT_CHANGE';
@@ -80,13 +80,13 @@ const updateFormValues = (name, value) => {
  * @returns void or error
  */
  export const getBookingTimes = () => async (dispatch, getState) => {
-  const authToken = getState().authToken;
+  // const authToken = getState().authToken;
   try {
     //get user from backend
-    const headers = {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${authToken}`,
-    };
+    // const headers = {
+    //   'Content-Type': 'application/json',
+    //   Authorization: `Bearer ${authToken}`,
+    // };
 
     // fetch fake data
     const getTimeResponse = fakeTimeData
@@ -113,9 +113,23 @@ const setTimeInBooking = (time) => {
 
 export const getBookingData = () => async (dispatch, getState) => {
 
-  const authToken = getState().authToken;
+  // const authToken = getState().authToken;
   try {
     //get user from backend
+    // const headers = {
+    //   'Content-Type': 'application/json',
+    //   Authorization: `Bearer ${authToken}`,
+    // };
+    //   const getLibraryResponse = await axios.get(PYTHON_API + 'v1/library/', {
+    //     headers,
+    //   });
+    // const getLibraryResponse = await axios.get(
+    //   'http://127.0.0.1:8000/api/library/'
+    // );
+    // const getLanguageResponse = await axios.get(
+    //   'http://127.0.0.1:8000/api/language/'
+    // );
+
     const headers = {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${authToken}`,
@@ -147,15 +161,29 @@ const setLibraryAndLanguageInBooking = (library, language) => {
  * @returns void or error
  */
  export const createBooking = () => async (dispatch, getState) => {
-  const authToken = getState().authToken;
+  // const authToken = getState().authToken;
   try {
     //get user from backend
+    // const headers = {
+    //   'Content-Type': 'application/json',
+    //   Authorization: `Bearer ${authToken}`,
+    // };
+    // const getTimeResponse = await axios.post(
+    //   'http://127.0.0.1:8000/api/book/'
+    // ),
+    // params: {
+    //   library: this.props.library,
+    //   language: this.props.language,
+    //   msm: this.props.time,
+    // }
+
     const headers = {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${authToken}`,
     };
 
     // upload data to server-side
+
 
     alert('success!')
 

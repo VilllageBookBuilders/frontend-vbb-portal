@@ -113,7 +113,9 @@ export const logInEmailPassword = (history) => async (dispatch, getState) => {
   }
 
   try {
-    const { accessToken, refreshToken } = await getTokenFromEmailPassword(
+    const { accessToken, 
+      //refreshToken
+    } = await getTokenFromEmailPassword(
       email,
       password
     );

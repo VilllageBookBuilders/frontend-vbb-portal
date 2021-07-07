@@ -1,10 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import axios from 'axios';
-
 import moment from 'moment';
 import 'moment-timezone';
-import { Form, Checkbox } from 'antd';
+import { Checkbox } from 'antd';
 
 import menteeComputer from '../images/vbb-mentee-computer.png';
 
