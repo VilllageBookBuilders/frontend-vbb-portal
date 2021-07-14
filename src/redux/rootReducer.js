@@ -5,6 +5,7 @@ import { isError } from './IsError.redux/IsError.reducer';
 import { authToken } from './AuthToken.redux/AuthToken.reducer';
 import { sessionSlot } from './SessionSlot.redux/SessionSlot.reducer';
 import { registrationForm } from './Registration.redux/RegistrationForm.reducer';
+import { booking } from './Booking.redux/Booking.reducer';
 import { processing } from './Processing.redux/Processing.reducer';
 
 /**
@@ -16,7 +17,8 @@ const rootReducer = combineReducers({
   sessionSlot,
   user,
   registrationForm,
-  processing,
+  booking,
+  processing
 });
 
 export default rootReducer;

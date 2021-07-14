@@ -17,7 +17,7 @@ const Language = ({ registrationForm, setRegistrationForm }) => {
           message: 'Language is required.',
           whitespace: true,
         },
-      ]}
+      ]} 
     >
       {/* Need to update with languages in backend */}
       <Checkbox

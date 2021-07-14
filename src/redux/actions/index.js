@@ -12,4 +12,5 @@ export * from '../SessionSlot.redux/SessionSlot.actions';
 export * from '../User.redux/User.actions';
 export * from '../Registration.redux/Registration.actions';
 export * from '../Newsletter.redux/Newsletter.actions';
+export * from '../Booking.redux/Booking.action';
 export * from '../Processing.redux/Processing.actions';

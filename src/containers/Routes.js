@@ -16,6 +16,9 @@ const Routes = ({ token }) => {
 
   return (
     <div className="App">
+      <Route exact path='/test-booking'>
+        <Booking />
+      </Route>
       <Route exact path="/register/">
         <TempRegistration />
       </Route>
